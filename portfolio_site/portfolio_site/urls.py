@@ -18,10 +18,11 @@ from django.contrib import admin
 from django.urls import path
 from blog import views 
 from institucional import views as institucional_views 
-# from projetos import views 
+from projetos import views as projetos_views 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('projetos/', projetos_views.projetos, name='projetos'),
     path('blog/', views.blog, name='blog'),
     path('institucional/', institucional_views.institucional, name='institucional')
     # path('projetos/', views.projetos, name='projetos')
